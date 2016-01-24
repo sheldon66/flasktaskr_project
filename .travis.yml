@@ -1,17 +1,16 @@
+# specify language
 language:
-- python
+  - python
+
+# specify python version(s)
 python:
-- '3.4'
-- '2.7'
+  - "3.4"
+  - "2.7"
+
+# install dependencies
 install:
-- pip install -r requirements.txt
+  - pip install -r requirements.txt
+
+# run tests
 script:
-- nosetests
-deploy:
-  provider: heroku
-  api_key:
-    secure: 55abf0dc-a453-4c0b-ba11-b52f2a9fe1aa
-  app: flasktaskrproject6666
-  on:
-    branch: master
-    repo: sheldon66/flasktaskr_project
+  -nosetests
