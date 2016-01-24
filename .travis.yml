@@ -13,4 +13,4 @@ install:
 
 # run tests
 script:
-  -nosetests
+  - nosetests
