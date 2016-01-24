@@ -11,7 +11,7 @@ deploy:
   provider: heroku
   api_key:
     secure: 55abf0dc-a453-4c0b-ba11-b52f2a9fe1aa
-  app: flasktaskr_project
+  app: flasktaskrproject6666
   on:
     branch: master
     repo: sheldon66/flasktaskr_project
