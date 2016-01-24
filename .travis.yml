@@ -1,18 +1,16 @@
-# specify language
 language:
-  - python
-
-# specify python version(s)
+- python
 python:
-  - "3.4"
-  - "2.7"
-
-# install dependencies
+- '3.4'
+- '2.7'
 install:
-  - pip install -r requirements.txt
-
-# run tests
+- pip install -r requirements.txt
 script:
-  - nosetests
-
-# deploy
+- nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: HruirLkg+p+QeYCclgfBNTu9+i1+GGOJNkXd3kf0Vr3TwREZI3ygc2aQcO/RB2FiJQ7vdUx2XXjpZauiEbYB7V3omA5at3V1DK4eh5U3Rvlh8neCzFF4jip8of5dL+JY5m67ZiUPgkhuva9515eigvJWwOux021oSs5kHjcHfwqE60e3N84FW4mhVeZlskYLDuvaEMXx9Ho6QcgPmmnbLtjNtl071pIQ7kP42MPUFTgbZ29iCaGyoqG7mGqUbMsRwz78iNRBpqvdxZ8H6ux+zXS5I3NQ2DMrozUneggPNJtqclDeIGuUoVpDD+RwBZIGIqpAv23vtj7h4w5JYAkPAqQliMKwSySWcT3cZJatY1Q4PTSEQIeVm9+1m/Q3mPtHB0owt/6xLcNnBx5Sd+XxVkdBYugnr8+scGBa3dZhYFMixoTmApw9oWKaf5acxRUuK95bmYfWW+rtTkPFHtmuFgNLfbOb1yKNVhtnaU4CFw0K2F0CvipiOoQnOycHvTBz17PQLwoBZHXAyx1lgRZTBTrgtE+RWhp4WJ3IiAQffqAf2E6lVO1WKYVqNlWYNfWjAQuZaJ++jXv1P6Ox1cRj82uztgxa/IlLYTXLR+B/ZKQcrNGNlo4AvBPejUVtlSfav1Di2LDi63DOrHFVop+uejpPP06F34B4/Y73LtnSs7k=
+  app: flasktaskr_project
+  on:
+    repo: sheldon66/flasktaskr_project
